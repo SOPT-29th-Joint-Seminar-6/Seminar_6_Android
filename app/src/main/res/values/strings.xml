@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Seminar_6_Android</string>
+
+    <!--Main-->
+    <string name="tab_name">탭이름</string>
+    <string name="empty_fragment">Empty fragment</string>
+    <string name="view">뷰</string>
+    <string name="my_view">My뷰</string>
+    <string name="find">발견</string>
+    <string name="kakao_tv">카카오TV</string>
+    <string name="residual_vaccine">잔여백신</string>
+    <string name="covid_19">코로나19</string>
 </resources>
