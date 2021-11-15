@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_person"
+        android:icon="@drawable/ic_tap_person"
+        android:title="@string/tab_name"/>
+    <item
+        android:id="@+id/menu_communicate"
+        android:icon="@drawable/ic_chatting"
+        android:title="@string/tab_name"/>
+    <item
+        android:id="@+id/menu_view"
+        android:icon="@drawable/ic_view"
+        android:title="@string/tab_name"/>
+    <item
+        android:id="@+id/menu_store"
+        android:icon="@drawable/ic_store"
+        android:title="@string/tab_name"/>
+    <item
+        android:id="@+id/menu_more"
+        android:icon="@drawable/ic_more"
+        android:title="@string/tab_name"/>
+
+</menu>
