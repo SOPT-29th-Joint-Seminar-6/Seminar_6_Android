@@ -4,7 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginLeft="9dp"
-    android:layout_marginRight="9dp">
+    android:layout_marginRight="9dp"
+    android:background="@drawable/rectangle_roundcorner_white"
+    android:layout_marginBottom="14dp">
 
     <ImageView
         android:id="@+id/iv_video_thumbnail"
@@ -22,7 +24,6 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="15dp"
         android:layout_marginTop="18dp"
-        android:scaleType="fitXY"
         android:src="@drawable/ic_full"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/iv_video_thumbnail" />
@@ -39,6 +40,7 @@
         android:textColor="#000000"
         android:textSize="17sp"
         android:textStyle="bold"
+        android:text="안녕하세요"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/iv_icon_full"
         app:layout_constraintTop_toBottomOf="@id/iv_video_thumbnail" />
@@ -51,6 +53,7 @@
         android:layout_marginRight="20dp"
         android:ellipsize="end"
         android:maxLines="1"
+        android:text="안녕하세요안녕하세요"
         android:textColor="#747474"
         android:textSize="13sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -90,6 +93,7 @@
         android:maxLines="1"
         android:textColor="#191919"
         android:textSize="14sp"
+        android:text="안녕하세요안녕하세요"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/iv_icon_channel"
         app:layout_constraintTop_toTopOf="@id/iv_icon_channel" />
@@ -106,6 +110,8 @@
         android:maxLines="1"
         android:textSize="13sp"
         android:textColor="#747474"
+        android:text="안녕하세요안녕하세요"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@id/tv_channel_name"
@@ -116,9 +122,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="9dp"
-        android:src="@drawable/ic_alarm_gray"
+        android:src="@drawable/selector_alarm"
         app:layout_constraintStart_toEndOf="@id/tv_channel_name"
         app:layout_constraintTop_toTopOf="@id/iv_icon_channel" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
