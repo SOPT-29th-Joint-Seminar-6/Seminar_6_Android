@@ -19,8 +19,6 @@ class FindFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentFindBinding.inflate(layoutInflater, container, false)
-        return binding.root
-    }
         initGridAdapter()
         initLinearAdapter()
         return binding.root
@@ -38,11 +36,9 @@ class FindFragment : Fragment() {
             )
         )
         newsCardAdapter.notifyDataSetChanged()
-        Log.d("data되고있니?","${newsCardAdapter.newsList.toString()}data 들어가고있니")
     }
 
     private fun initLinearAdapter() {
-        Log.d("init되고있니?","initAdapter 호출")
         newsLinearCardAdapter = NewsLinearCardAdapter()
         binding.includeNewsLinearCard.rvNewsCard.adapter = newsLinearCardAdapter
 
