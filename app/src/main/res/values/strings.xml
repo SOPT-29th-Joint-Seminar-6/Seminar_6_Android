@@ -10,4 +10,10 @@
     <string name="kakao_tv">카카오TV</string>
     <string name="residual_vaccine">잔여백신</string>
     <string name="covid_19">코로나19</string>
+    <string name="grid_card_title">오늘의 영화계 소식</string>
+    <string name="grid_card_description">영화계 이모저모 모아봤습니다.</string>
+    <string name="card_time">2시간 전</string>
+    <string name="linear_card_account">경기연합신문</string>
+    <string name="linear_card_news_title">백신 접종 이상 반응..치료제가 답인가?</string>
+    <string name="news_time">19시간 전</string>
 </resources>
