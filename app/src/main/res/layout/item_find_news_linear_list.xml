@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_linear_news_img"
+        android:layout_width="93dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="93:57"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/img_vaccin" />
+
+    <TextView
+        android:id="@+id/tv_linear_news_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="11dp"
+        android:layout_marginEnd="9dp"
+        android:text="광주교도소 20대 재소자, 모더나 접종 이틀 후 사망"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_linear_news_img"
+        app:layout_constraintTop_toTopOf="@+id/iv_linear_news_img" />
+
+    <ImageView
+        android:id="@+id/iv_linear_newspaper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@+id/tv_linear_news_title"
+        app:layout_constraintTop_toBottomOf="@+id/tv_linear_news_title"
+        app:srcCompat="@drawable/ic_newspaper" />
+
+    <TextView
+        android:id="@+id/tv_linear_newspaper_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:text="경기연합신문"
+        android:textSize="13sp"
+        app:layout_constraintStart_toEndOf="@+id/iv_linear_newspaper"
+        app:layout_constraintTop_toTopOf="@+id/iv_linear_newspaper" />
+</androidx.constraintlayout.widget.ConstraintLayout>
