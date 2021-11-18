@@ -23,6 +23,8 @@ class KakaoTVAdapter : RecyclerView.Adapter<KakaoTVAdapter.KakaoTVViewHolder>() 
 
     override fun onBindViewHolder(holder: KakaoTVAdapter.KakaoTVViewHolder, position: Int) {
         holder.onBind(kakaoTVChannelList[position])
+
+
     }
 
     override fun getItemCount(): Int = kakaoTVChannelList.size
@@ -30,6 +32,11 @@ class KakaoTVAdapter : RecyclerView.Adapter<KakaoTVAdapter.KakaoTVViewHolder>() 
     class KakaoTVViewHolder(private val binding: ItemKakaotvListBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun onBind(data: KakaoTVChannelData) {
+            binding.btnBell.setOnClickListener {
+                binding.btnBell.isSelected = !binding.btnBell.isSelected
+                // 누를떄마다 현재값의 반대값으로 바뀜
+
+            }
             binding.tvVideoTitle.text = data.video_title
             binding.tvVideoIntro.text = data.video_intro
             binding.tvChannelName.text = data.channel_name
