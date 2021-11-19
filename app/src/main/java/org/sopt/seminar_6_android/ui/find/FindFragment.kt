@@ -38,11 +38,10 @@ class FindFragment : Fragment() {
     }
 
     private fun showPopup() {
-        val inflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
+        val inflater = requireContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
         val view = inflater.inflate(R.layout.add_channel_popup, null)
 
-        val dialog = AlertDialog.Builder(this)
-            .setTitle("Dialog")
+        val dialog = AlertDialog.Builder(requireContext())
 
         dialog.setView(view)
         dialog.show()
