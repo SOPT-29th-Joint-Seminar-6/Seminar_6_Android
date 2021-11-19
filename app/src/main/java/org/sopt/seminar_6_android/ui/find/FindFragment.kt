@@ -1,6 +1,7 @@
 package org.sopt.seminar_6_android.ui.find
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -13,7 +14,6 @@ class FindFragment : Fragment() {
     private lateinit var newsCardAdapter: NewsCardAdapter
     private lateinit var newsLinearCardAdapter: NewsLinearCardAdapter
 
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -25,6 +25,11 @@ class FindFragment : Fragment() {
     }
 
     private fun initGridAdapter() {
+        initAdapter()
+        return binding.root
+    }
+
+    private fun initAdapter() {
         newsCardAdapter = NewsCardAdapter()
         binding.includeNewsCard.rvNewsCard.adapter = newsCardAdapter
 

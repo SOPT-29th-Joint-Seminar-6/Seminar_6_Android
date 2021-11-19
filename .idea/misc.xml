@@ -1,3 +1,4 @@
+
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DesignSurface">
@@ -19,6 +20,7 @@
         <entry key="..\:/GitHub/Seminar_6_Android/app/src/main/res/drawable/ic_launcher_background.xml" value="0.37552083333333336" />
         <entry key="..\:/GitHub/Seminar_6_Android/app/src/main/res/layout/activity_main.xml" value="0.32971014492753625" />
         <entry key="..\:/GitHub/Seminar_6_Android/app/src/main/res/layout/find_news_card.xml" value="0.2839248434237996" />
+
         <entry key="..\:/GitHub/Seminar_6_Android/app/src/main/res/layout/find_news_grid_card.xml" value="0.6666666666666666" />
         <entry key="..\:/GitHub/Seminar_6_Android/app/src/main/res/layout/find_news_linear_card.xml" value="0.4466666666666667" />
         <entry key="..\:/GitHub/Seminar_6_Android/app/src/main/res/layout/fragment_find.xml" value="0.3333333333333333" />
@@ -28,13 +30,40 @@
         <entry key="..\:/GitHub/Seminar_6_Android/app/src/main/res/layout/item_find_news_list.xml" value="0.4267241379310345" />
         <entry key="..\:/GitHub/Seminar_6_Android/app/src/main/res/layout/kakao_t_v_card.xml" value="0.6" />
         <entry key="..\:/GitHub/Seminar_6_Android/app/src/main/res/layout/kakao_t_v_news.xml" value="0.4466666666666667" />
+
+        <entry key="..\:/GitHub/Seminar_6_Android/app/src/main/res/layout/fragment_find.xml" value="0.3333333333333333" />
+        <entry key="..\:/GitHub/Seminar_6_Android/app/src/main/res/layout/fragment_kakao_t_v.xml" value="0.22" />
+        <entry key="..\:/GitHub/Seminar_6_Android/app/src/main/res/layout/item_find_news_list.xml" value="0.4267241379310345" />
+        <entry key="..\:/GitHub/Seminar_6_Android/app/src/main/res/layout/kakao_t_v_card.xml" value="0.6" />
+        <entry key="..\:/GitHub/Seminar_6_Android/app/src/main/res/layout/kakao_t_v_news.xml" value="0.4466666666666667" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/Seminar_6_Android/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.3875" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/Seminar_6_Android/app/src/main/res/drawable/ic_launcher_background.xml" value="0.3875" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/Seminar_6_Android/app/src/main/res/drawable/ic_more.xml" value="0.3875" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/Seminar_6_Android/app/src/main/res/drawable/ic_search.xml" value="0.3875" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/Seminar_6_Android/app/src/main/res/drawable/ic_setting.xml" value="0.3875" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/Seminar_6_Android/app/src/main/res/drawable/ic_store.xml" value="0.3875" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/Seminar_6_Android/app/src/main/res/drawable/ic_view.xml" value="0.234375" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/Seminar_6_Android/app/src/main/res/drawable/line_rectangular_gray.xml" value="0.234375" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/Seminar_6_Android/app/src/main/res/drawable/rectangle_roundcorner_white.xml" value="0.234375" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/Seminar_6_Android/app/src/main/res/drawable/selector_alarm.xml" value="0.3875" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/Seminar_6_Android/app/src/main/res/layout/activity_main.xml" value="0.12635869565217392" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/Seminar_6_Android/app/src/main/res/layout/fragment_kakao_t_v.xml" value="0.33" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/Seminar_6_Android/app/src/main/res/layout/fragment_newest_chip.xml" value="0.20364583333333333" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/Seminar_6_Android/app/src/main/res/layout/fragment_popular_chip.xml" value="0.21822916666666667" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/Seminar_6_Android/app/src/main/res/layout/fragment_recommend_chip.xml" value="0.5" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/Seminar_6_Android/app/src/main/res/layout/fragment_show_all_channel_chip.xml" value="0.21822916666666667" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/Seminar_6_Android/app/src/main/res/layout/fragment_tab_view.xml" value="0.21822916666666667" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/Seminar_6_Android/app/src/main/res/layout/fragment_view.xml" value="0.21822916666666667" />
+        <entry key="..\:/Users/Administrator/AndroidStudioProjects/Seminar_6_Android/app/src/main/res/layout/item_kakaotv_list.xml" value="0.5" />
+
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
   </component>
+
 </project>

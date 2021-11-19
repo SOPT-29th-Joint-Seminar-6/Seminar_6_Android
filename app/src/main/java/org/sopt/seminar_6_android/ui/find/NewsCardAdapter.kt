@@ -25,7 +25,7 @@ class NewsCardAdapter : RecyclerView.Adapter<NewsCardAdapter.CardViewHolder>() {
     }
 
     override fun getItemCount(): Int = newsList.size
-
+  
     class CardViewHolder(private val binding: ItemFindNewsGridListBinding)
         : RecyclerView.ViewHolder(binding.root) {
         fun onBind(data: NewsGridData) {
