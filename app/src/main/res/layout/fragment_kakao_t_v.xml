@@ -1,18 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.kakaotv.KakaoTVFragment">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/kakao_tv"
+    tools:context=".ui.kakaotv.KakaoTVFragment"
+    >
+    <!--#하고 0 8개 쓰면 투명색됨-->
+    <!--background : 색깔, 이미지 등등 여러가지 넣을 수 있다-->
+    <!--backgroundtint : 색깔만 넣을 수 있다-->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        >
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#F5F5F5"
+            >
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chip_group_kakaotv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="9dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                >
+
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="9dp"
+                    android:layout_marginEnd="0dp"
+                    android:text="#전채 채널 보기"
+                    android:textColor="#494949"
+                    android:textSize="13sp"
+                    app:chipBackgroundColor="#00000000"
+                    app:chipCornerRadius="16dp"
+                    app:chipStrokeColor="#D2D2D2"
+                    app:chipStrokeWidth="1dp"
+                    />
+
+
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="9dp"
+                    android:layout_marginEnd="0dp"
+                    android:backgroundTint="@color/black"
+                    android:text="#추천"
+                    android:textColor="#FFFFFF"
+                    android:textSize="13sp"
+                    app:chipCornerRadius="16dp"
+                    android:layout_marginTop="0dp"
+                    />
+
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="9dp"
+                    android:layout_marginEnd="0dp"
+                    android:text="#최신"
+                    android:textColor="#494949"
+                    android:textSize="13sp"
+                    app:chipBackgroundColor="#00000000"
+                    app:chipCornerRadius="16dp"
+                    app:chipStrokeColor="#D2D2D2"
+                    app:chipStrokeWidth="1dp"
+                    android:layout_marginTop="0dp"
+                    />
+
+                <com.google.android.material.chip.Chip
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="9dp"
+                    android:layout_marginEnd="0dp"
+                    android:text="#인기"
+                    android:textColor="#494949"
+                    android:textSize="13sp"
+                    app:chipBackgroundColor="#00000000"
+                    app:chipCornerRadius="16dp"
+                    app:chipStrokeColor="#D2D2D2"
+                    app:chipStrokeWidth="1dp"
+                    />
+            </com.google.android.material.chip.ChipGroup>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_kakaotv_channel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintTop_toBottomOf="@id/chip_group_kakaotv"
+                android:paddingBottom="34dp"
+                tools:itemCount="2"
+                tools:listitem="@layout/item_kakaotv_list"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
