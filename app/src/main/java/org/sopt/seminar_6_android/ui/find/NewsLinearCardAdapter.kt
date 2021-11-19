@@ -4,16 +4,16 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import org.sopt.seminar_6_android.databinding.ItemFindNewsGridListBinding
+import org.sopt.seminar_6_android.databinding.ItemFindNewsLinearListBinding
 
-class NewsCardAdapter : RecyclerView.Adapter<NewsCardAdapter.CardViewHolder>() {
+class NewsLinearCardAdapter : RecyclerView.Adapter<NewsLinearCardAdapter.CardViewHolder>() {
     val newsList = mutableListOf<NewsGridData>()
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
     ): CardViewHolder {
-        val binding = ItemFindNewsGridListBinding.inflate(
+        val binding = ItemFindNewsLinearListBinding.inflate(
             LayoutInflater.from(parent.context),
             parent, false
         )
@@ -25,12 +25,12 @@ class NewsCardAdapter : RecyclerView.Adapter<NewsCardAdapter.CardViewHolder>() {
     }
 
     override fun getItemCount(): Int = newsList.size
-  
-    class CardViewHolder(private val binding: ItemFindNewsGridListBinding)
+
+    class CardViewHolder(private val binding: ItemFindNewsLinearListBinding)
         : RecyclerView.ViewHolder(binding.root) {
         fun onBind(data: NewsGridData) {
-            Glide.with(itemView).load(data.newsImg).into(binding.ivMovieImg)
-            binding.tvMovieTitle.text = data.newsTitle
+            Glide.with(itemView).load(data.newsImg).into(binding.ivLinearNewsImg)
+            binding.tvLinearNewsTitle.text = data.newsTitle
         }
     }
 }
