@@ -1,11 +1,16 @@
 package org.sopt.seminar_6_android.ui.find
 
+import android.app.AlertDialog
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat.getSystemService
 import androidx.fragment.app.Fragment
+import org.sopt.seminar_6_android.R
 import org.sopt.seminar_6_android.databinding.FragmentFindBinding
+
 
 class FindFragment : Fragment() {
     private var _binding: FragmentFindBinding? = null
@@ -22,6 +27,25 @@ class FindFragment : Fragment() {
         initGridAdapter()
         initLinearAdapter()
         return binding.root
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        binding.includeNewsCard.ivKakaoChannel.setOnClickListener {
+            showPopup()
+        }
+    }
+
+    private fun showPopup() {
+        val inflater = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
+        val view = inflater.inflate(R.layout.add_channel_popup, null)
+
+        val dialog = AlertDialog.Builder(this)
+            .setTitle("Dialog")
+
+        dialog.setView(view)
+        dialog.show()
     }
 
     private fun initGridAdapter() {
