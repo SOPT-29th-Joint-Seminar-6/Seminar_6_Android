@@ -4,17 +4,18 @@ data class ResponseFindData(
     val status : Int,
     val success : Boolean,
     val message : String,
-    val data : Data
+    val data : List<Data>
 ) {
     data class Data (
         val id: Int,
         val channelName: String,
         val like: Int,
         val channelDesc: String,
+        val isDeleted: Boolean,
         val createAt: String,
         val friendCount: Int,
         val channelImageUrl: String,
-        val articles : Article
+        val articles : List<Article>
     ) {
         data class Article(
             val id: Int,
