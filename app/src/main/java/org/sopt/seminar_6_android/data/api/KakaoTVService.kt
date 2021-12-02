@@ -7,7 +7,7 @@ import retrofit2.http.Headers
 
 interface KakaoTVService {
     @Headers("Content-Type:application/json")
-    @GET("/view/viewthumb")
+    @GET("view/viewthumb")
     fun getVideoList(
     ) : Call<ResponseKakaotvThumbnailData>
 }
