@@ -23,7 +23,7 @@ class FindFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentFindBinding.inflate(layoutInflater, container, false)
-        initGridAdapter()
+        initAdapter()
         initLinearAdapter()
         initDialog()
         initTestClickListener()
@@ -70,11 +70,6 @@ class FindFragment : Fragment() {
             }
         }
     }
-    
-    private fun initGridAdapter() {
-        initAdapter()
-        return binding.root
-    }
 
     private fun initAdapter() {
         newsCardAdapter = NewsCardAdapter()
@@ -82,7 +77,6 @@ class FindFragment : Fragment() {
 
         newsCardAdapter.newsList.addAll(
             listOf(
-                NewsGridData("https://cdn.pixabay.com/photo/2021/11/08/11/19/buildings-6778915_1280.jpg", "설명1"),
                 NewsGridData("https://cdn.pixabay.com/photo/2021/11/08/11/19/buildings-6778915_1280.jpg", "설명1"),
                 NewsGridData("https://cdn.pixabay.com/photo/2021/11/08/11/19/buildings-6778915_1280.jpg", "설명1")
             )
@@ -96,7 +90,6 @@ class FindFragment : Fragment() {
 
         newsLinearCardAdapter.newsList.addAll(
             listOf(
-                NewsGridData("https://cdn.pixabay.com/photo/2021/11/08/11/19/buildings-6778915_1280.jpg", "설명1"),
                 NewsGridData("https://cdn.pixabay.com/photo/2021/11/08/11/19/buildings-6778915_1280.jpg", "설명1"),
                 NewsGridData("https://cdn.pixabay.com/photo/2021/11/08/11/19/buildings-6778915_1280.jpg", "설명1")
             )
