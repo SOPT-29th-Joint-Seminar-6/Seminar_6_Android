@@ -1,5 +1,6 @@
 package org.sopt.seminar_6_android.ui.find
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -29,7 +30,8 @@ class NewsCardAdapter : RecyclerView.Adapter<NewsCardAdapter.CardViewHolder>() {
     class CardViewHolder(private val binding: ItemFindNewsGridListBinding)
         : RecyclerView.ViewHolder(binding.root) {
         fun onBind(data: NewsGridData) {
-            Glide.with(itemView).load(data.newsImg).into(binding.ivMovieImg)
+            Log.d("데이터가 들어올까", "${data}")
+            Glide.with(binding.ivMovieImg).load(data.newsImg).into(binding.ivMovieImg)
             binding.tvMovieTitle.text = data.newsTitle
         }
     }
