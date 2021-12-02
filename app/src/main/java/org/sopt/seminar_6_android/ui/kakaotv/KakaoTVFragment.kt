@@ -70,6 +70,85 @@ class KakaoTVFragment : Fragment() {
         kakaoTVAdapter.notifyDataSetChanged()
     }
 
+    {
+        "status" : 200,
+        "success" : true,
+        "message" : "로그인 성공"
+        "data" : {
+            "id" : 1,
+            "name" : "김우영"
+            "email" : "kimwy1997@gmail.com"
+    }
+    }
+
+    data class ResponseLoginData(
+        val status : Int,
+        val success : Boolean,
+        val message : String,
+        val data : Data
+    ) {
+        data class Data(
+            val id: Int,
+            val name : String,
+            val email : String
+        )
+    }
+
+
+    data class ResponseVideoData(
+        val status : Int,
+        val success: Boolean,
+        val message: String,
+        val data : Data
+    ) {
+        data class Data(
+
+        )
+    }
+
+    {
+        "status": 200,
+        "success": true,
+        "message": "모든 비디오포스트 조회 성공",
+        "data": [
+        {
+            "id": 1,
+            "title": "6회, 속보! 신용 거래 개미 등장?!",
+            "desc": "흔들리는 장중 속에서-멘탈을 잡아볼 거야  울고있는 개미",
+            "thumbnailImageUrl": "장동민사진",
+            "isDeleted": false,
+            "videochannelId": 1,
+            "videos": [
+            {
+                "id": 1,
+                "title": "6회, 속보! 신용 거래 개미 등장?!",
+                "desc": "흔들리는 장중 속에서-멘탈을 잡아볼 거야  울고있는 개미",
+                "thumbnailImageUrl": "장동민사진",
+                "isDeleted": false,
+                "videochannelId": 1
+            }
+            ]
+        },
+        {
+            "id": 2,
+            "title": "4회, 잘하는 것도, 목하는 것도 없어",
+            "desc": "하고 싶은 대로 살자~",
+            "thumbnailImageUrl": "강아지사진",
+            "isDeleted": false,
+            "videochannelId": 2,
+            "videos": [
+            {
+                "id": 2,
+                "title": "4회, 잘하는 것도, 목하는 것도 없어",
+                "desc": "하고 싶은 대로 살자~",
+                "thumbnailImageUrl": "강아지사진",
+                "isDeleted": false,
+                "videochannelId": 2
+            }
+            ]
+        }
+        ]
+    }
 
 
 
