@@ -1,10 +1,9 @@
 package org.sopt.seminar_6_android.ui.find
 
+import android.app.Dialog
 import android.os.Bundle
 import android.util.Log
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import androidx.fragment.app.Fragment
 import org.sopt.seminar_6_android.databinding.FragmentFindBinding
 
@@ -19,18 +18,12 @@ class FindFragment : Fragment() {
     ): View? {
         _binding = FragmentFindBinding.inflate(layoutInflater, container, false)
         initAdapter()
-<<<<<<< Updated upstream
-        return binding.root
-    }
-=======
         initLinearAdapter()
         initDialog()
         initTestClickListener()
         initClickEvent()
         return binding.root
     }
-
-
 
     private lateinit var addDialog: Dialog // dialog 선언
     private lateinit var addDialogBinding: AddChannelPopupBinding // dialog xml binding 선언
@@ -69,7 +62,6 @@ class FindFragment : Fragment() {
             }
         }
     }
->>>>>>> Stashed changes
 
     private fun initAdapter() {
         Log.d("init되고있니?","initAdapter 호출")
@@ -78,15 +70,6 @@ class FindFragment : Fragment() {
 
         newsCardAdapter.newsList.addAll(
             listOf(
-<<<<<<< Updated upstream
-                NewsData("https://cdn.pixabay.com/photo/2021/11/08/11/19/buildings-6778915_1280.jpg", "설명1"),
-                NewsData("https://cdn.pixabay.com/photo/2021/11/08/11/19/buildings-6778915_1280.jpg", "설명1"),
-                NewsData("https://cdn.pixabay.com/photo/2021/11/08/11/19/buildings-6778915_1280.jpg", "설명1")
-            )
-        )
-        newsCardAdapter.notifyDataSetChanged()
-        Log.d("data되고있니?","${newsCardAdapter.newsList.toString()}data 들어가고있니")
-=======
                 NewsGridData("https://cdn.pixabay.com/photo/2021/11/08/11/19/buildings-6778915_1280.jpg", "설명1"),
                 NewsGridData("https://cdn.pixabay.com/photo/2021/11/08/11/19/buildings-6778915_1280.jpg", "설명1")
             )
@@ -105,7 +88,6 @@ class FindFragment : Fragment() {
             )
         )
         newsLinearCardAdapter.notifyDataSetChanged()
->>>>>>> Stashed changes
     }
 
     override fun onDestroyView() {
