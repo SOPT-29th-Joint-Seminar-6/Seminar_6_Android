@@ -4,5 +4,6 @@ data class KakaoTVChannelData(
     val video_title : String,
     val video_intro : String,
     val channel_name : String,
-    val channel_intro : String
+    val channel_intro : String,
+    val img_url : String
 )
