@@ -3,11 +3,12 @@ package org.sopt.seminar_6_android.ui.kakaotv
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import org.sopt.seminar_6_android.data.model.response.ResponseKakaotvThumbnailData
 import org.sopt.seminar_6_android.databinding.ItemKakaotvListBinding
 
 class KakaoTVAdapter : RecyclerView.Adapter<KakaoTVAdapter.KakaoTVViewHolder>() {
 
-    val kakaoTVChannelList = mutableListOf<KakaoTVChannelData>()
+    val kakaoTVChannelList : MutableList<ResponseKakaotvThumbnailData.Post> = mutableListOf<ResponseKakaotvThumbnailData.Post>()
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
@@ -31,16 +32,16 @@ class KakaoTVAdapter : RecyclerView.Adapter<KakaoTVAdapter.KakaoTVViewHolder>() 
 
     class KakaoTVViewHolder(private val binding: ItemKakaotvListBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        fun onBind(data: KakaoTVChannelData) {
+        fun onBind(data: ResponseKakaotvThumbnailData.Post) {
             binding.btnBell.setOnClickListener {
                 binding.btnBell.isSelected = !binding.btnBell.isSelected
                 // 누를떄마다 현재값의 반대값으로 바뀜
 
             }
-            binding.tvVideoTitle.text = data.video_title
-            binding.tvVideoIntro.text = data.video_intro
-            binding.tvChannelName.text = data.channel_name
-            binding.tvChannelIntro.text = data.channel_intro
+            binding.tvVideoTitle.text = data.title
+            binding.tvVideoIntro.text = data.desc
+            binding.tvChannelName.text = data.videos[0].title
+            binding.tvChannelIntro.text = data.videos[0].desc
         }
     }
 }
