@@ -19,8 +19,57 @@ class FindFragment : Fragment() {
     ): View? {
         _binding = FragmentFindBinding.inflate(layoutInflater, container, false)
         initAdapter()
+<<<<<<< Updated upstream
         return binding.root
     }
+=======
+        initLinearAdapter()
+        initDialog()
+        initTestClickListener()
+        initClickEvent()
+        return binding.root
+    }
+
+
+
+    private lateinit var addDialog: Dialog // dialog 선언
+    private lateinit var addDialogBinding: AddChannelPopupBinding // dialog xml binding 선언
+
+    private fun initDialog() {
+        addDialog = Dialog(requireContext())
+
+        addDialogBinding = AddChannelPopupBinding.inflate(layoutInflater) // dialog xml binding 연결
+
+        addDialog.apply {
+            requestWindowFeature(Window.FEATURE_NO_TITLE)
+            setCancelable(false)
+            setContentView(addDialogBinding.root) // dialog xml binding, dialog 연결
+
+            with(window?.attributes)  { // dialog size
+                this?.width = WindowManager.LayoutParams.MATCH_PARENT
+                this?.height = WindowManager.LayoutParams.WRAP_CONTENT
+                this?.verticalWeight = 1F
+            }
+        }
+    }
+
+    private fun initTestClickListener() {
+        binding.includeNewsCard.ivKakaoChannel.setOnClickListener { //  up button을 누르면 dialog를 띄움
+            addDialog.show()
+        }
+    }
+
+    private fun initClickEvent() {
+        addDialogBinding.apply {
+            ivChannel.setOnClickListener { // dialog layout 내의 button을 눌렀을 때 동작
+                addDialog.dismiss() // dialog close()
+            }
+            ivCancel.setOnClickListener {
+                addDialog.dismiss()
+            }
+        }
+    }
+>>>>>>> Stashed changes
 
     private fun initAdapter() {
         Log.d("init되고있니?","initAdapter 호출")
@@ -29,6 +78,7 @@ class FindFragment : Fragment() {
 
         newsCardAdapter.newsList.addAll(
             listOf(
+<<<<<<< Updated upstream
                 NewsData("https://cdn.pixabay.com/photo/2021/11/08/11/19/buildings-6778915_1280.jpg", "설명1"),
                 NewsData("https://cdn.pixabay.com/photo/2021/11/08/11/19/buildings-6778915_1280.jpg", "설명1"),
                 NewsData("https://cdn.pixabay.com/photo/2021/11/08/11/19/buildings-6778915_1280.jpg", "설명1")
@@ -36,6 +86,26 @@ class FindFragment : Fragment() {
         )
         newsCardAdapter.notifyDataSetChanged()
         Log.d("data되고있니?","${newsCardAdapter.newsList.toString()}data 들어가고있니")
+=======
+                NewsGridData("https://cdn.pixabay.com/photo/2021/11/08/11/19/buildings-6778915_1280.jpg", "설명1"),
+                NewsGridData("https://cdn.pixabay.com/photo/2021/11/08/11/19/buildings-6778915_1280.jpg", "설명1")
+            )
+        )
+        newsCardAdapter.notifyDataSetChanged()
+    }
+
+    private fun initLinearAdapter() {
+        newsLinearCardAdapter = NewsLinearCardAdapter()
+        binding.includeNewsLinearCard.rvNewsCard.adapter = newsLinearCardAdapter
+
+        newsLinearCardAdapter.newsList.addAll(
+            listOf(
+                NewsGridData("https://cdn.pixabay.com/photo/2021/11/08/11/19/buildings-6778915_1280.jpg", "설명1"),
+                NewsGridData("https://cdn.pixabay.com/photo/2021/11/08/11/19/buildings-6778915_1280.jpg", "설명1")
+            )
+        )
+        newsLinearCardAdapter.notifyDataSetChanged()
+>>>>>>> Stashed changes
     }
 
     override fun onDestroyView() {
