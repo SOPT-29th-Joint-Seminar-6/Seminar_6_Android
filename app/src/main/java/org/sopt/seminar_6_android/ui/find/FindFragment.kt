@@ -70,10 +70,52 @@ class FindFragment : Fragment() {
             }
         }
     }
-    
+
     private fun initGridAdapter() {
         initAdapter()
+        initLinearAdapter()
+        initDialog()
+        initTestClickListener()
+        initClickEvent()
         return binding.root
+    }
+
+    private lateinit var addDialog: Dialog // dialog 선언
+    private lateinit var addDialogBinding: AddChannelPopupBinding // dialog xml binding 선언
+
+    private fun initDialog() {
+        addDialog = Dialog(requireContext())
+
+        addDialogBinding = AddChannelPopupBinding.inflate(layoutInflater) // dialog xml binding 연결
+
+        addDialog.apply {
+            requestWindowFeature(Window.FEATURE_NO_TITLE)
+            setCancelable(false)
+            setContentView(addDialogBinding.root) // dialog xml binding, dialog 연결
+
+            with(window?.attributes)  { // dialog size
+                this?.width = WindowManager.LayoutParams.MATCH_PARENT
+                this?.height = WindowManager.LayoutParams.WRAP_CONTENT
+                this?.verticalWeight = 1F
+            }
+        }
+    }
+
+    private fun initTestClickListener() {
+        binding.includeNewsCard.ivKakaoChannel.setOnClickListener { //  up button을 누르면 dialog를 띄움
+            addDialog.show()
+        }
+    }
+
+    private fun initClickEvent() {
+        addDialogBinding.apply {
+            ivChannel.setOnClickListener { // dialog layout 내의 button을 눌렀을 때 동작
+                addDialog.dismiss() // dialog close()
+            }
+            ivCancel.setOnClickListener {
+                addDialog.dismiss()
+            }
+        }
     }
 
     private fun initAdapter() {
@@ -82,7 +124,6 @@ class FindFragment : Fragment() {
 
         newsCardAdapter.newsList.addAll(
             listOf(
-                NewsGridData("https://cdn.pixabay.com/photo/2021/11/08/11/19/buildings-6778915_1280.jpg", "설명1"),
                 NewsGridData("https://cdn.pixabay.com/photo/2021/11/08/11/19/buildings-6778915_1280.jpg", "설명1"),
                 NewsGridData("https://cdn.pixabay.com/photo/2021/11/08/11/19/buildings-6778915_1280.jpg", "설명1")
             )
@@ -96,7 +137,6 @@ class FindFragment : Fragment() {
 
         newsLinearCardAdapter.newsList.addAll(
             listOf(
-                NewsGridData("https://cdn.pixabay.com/photo/2021/11/08/11/19/buildings-6778915_1280.jpg", "설명1"),
                 NewsGridData("https://cdn.pixabay.com/photo/2021/11/08/11/19/buildings-6778915_1280.jpg", "설명1"),
                 NewsGridData("https://cdn.pixabay.com/photo/2021/11/08/11/19/buildings-6778915_1280.jpg", "설명1")
             )
