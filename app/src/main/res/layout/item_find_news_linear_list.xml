@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    android:paddingBottom="13dp">
 
     <ImageView
         android:id="@+id/iv_linear_news_img"
@@ -17,11 +18,13 @@
 
     <TextView
         android:id="@+id/tv_linear_news_title"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="11dp"
         android:layout_marginEnd="9dp"
         android:text="광주교도소 20대 재소자, 모더나 접종 이틀 후 사망"
+        android:ellipsize="end"
+        android:maxLines="1"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/iv_linear_news_img"
