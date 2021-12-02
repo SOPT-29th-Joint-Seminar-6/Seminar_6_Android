@@ -7,7 +7,7 @@ import com.bumptech.glide.Glide
 import org.sopt.seminar_6_android.databinding.ItemFindNewsLinearListBinding
 
 class NewsLinearCardAdapter : RecyclerView.Adapter<NewsLinearCardAdapter.CardViewHolder>() {
-    val newsList = mutableListOf<NewsGridData>()
+    val newsList = mutableListOf<NewsLinearData>()
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
@@ -28,7 +28,7 @@ class NewsLinearCardAdapter : RecyclerView.Adapter<NewsLinearCardAdapter.CardVie
 
     class CardViewHolder(private val binding: ItemFindNewsLinearListBinding)
         : RecyclerView.ViewHolder(binding.root) {
-        fun onBind(data: NewsGridData) {
+        fun onBind(data: NewsLinearData) {
             Glide.with(itemView).load(data.newsImg).into(binding.ivLinearNewsImg)
             binding.tvLinearNewsTitle.text = data.newsTitle
         }
